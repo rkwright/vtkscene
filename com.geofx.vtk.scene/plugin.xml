@@ -17,7 +17,7 @@
       </view>
    </extension>
 
-   <extension
+   <!-- extension
          point="org.eclipse.ui.actionSets">
       <actionSet
             id="com.geofx.vtk.composite.actionSet"
@@ -37,5 +37,47 @@
                toolbarPath="selectGroup"
                tooltip="Select Scene"/>
       </actionSet>
+   </extension -->
+   
+   
+   <extension
+          point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.geofx.vtk.scene.SelectHandler"
+            id="com.geofx.vtk.commands.select"
+            name="Select">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+         		id="selectMenu"
+                label="VTK Select">
+            <command
+                  commandId="com.geofx.vtk.commands.select"
+                  icon="icons/vtk-logo_16.png"
+                  label="Select..."
+                  tooltip="Show dialog to select demo">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+              id="com.geofx.vtk.toolbar"
+              label="VTK Toolbar">
+              <command
+                   commandId="com.geofx.vtk.commands.select"
+                   icon="icons/vtk-logo_16.png"
+                   style="push"
+                   tooltip="Open dialog to select demo">
+              </command>
+         </toolbar>
+      </menuContribution>
    </extension>
 </plugin>

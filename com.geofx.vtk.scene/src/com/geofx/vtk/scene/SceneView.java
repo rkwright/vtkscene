@@ -30,7 +30,7 @@ public class SceneView extends ViewPart
 	public static final String ID = "com.geofx.vtk.scene.VTKScene";
 
 	private VTKComposite 		vtkComposite;
-	private VTKScene				scene;
+	private VTKScene			scene;
 	private String 				sceneName;
 
 	/**
