@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="VTK Demos"
+            id="com.geofx.vtk.scene">
+      </category>
+      <view
+            name="VTK Scene"
+            icon="icons/vtk-logo_16.png"
+            category="com.geofx.vtk.scene"
+            class="com.geofx.vtk.scene.SceneView"
+            id="com.geofx.vtk.scene.VTKScene">
+      </view>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.geofx.vtk.composite.actionSet"
+            label="Select Scene"
+            visible="true">
+         <menu
+               id="sceneSelect"
+               label="&amp;VTK Scene">
+            <separator name="selectGroup"/>
+         </menu>
+         <action
+               class="com.geofx.vtk.scene.SceneSelect"
+               icon="icons/vtk-logo_16.png"
+               id="com.geofx.vtk.composite.actions.SelectScene"
+               label="&amp;Select Scene"
+               menubarPath="sceneSelect/selectGroup"
+               toolbarPath="selectGroup"
+               tooltip="Select Scene"/>
+      </actionSet>
+   </extension>
+</plugin>

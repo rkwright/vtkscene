@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VTK Scene
+Bundle-SymbolicName: com.geofx.vtk.scene;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.geofx.vtk.plugin.Activator
+Bundle-Vendor: Geo-F/X
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.geofx.vtk.scene
+Import-Package: vtk

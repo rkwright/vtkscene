@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.vtk.runtime
+Bundle-SymbolicName: org.vtk.runtime
+Bundle-Version: 1.0.0
+Bundle-ClassPath: vtk.jar
+Bundle-Vendor: Kitware
+Export-Package: vtk,
+ vtk.rendering,
+ vtk.rendering.awt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
