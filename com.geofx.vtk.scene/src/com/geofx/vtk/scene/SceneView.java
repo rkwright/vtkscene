@@ -59,8 +59,10 @@ public class SceneView extends ViewPart
 	public void dispose()
 	{
 		System.out.println("SceneView.dispose called");
-		this.scene.dispose();
-		Activator.setView(null);
+		if (this.scene != null)
+			this.scene.dispose();
+		if (Activator.getView() != null)
+			Activator.setView(null);
 	}
 	
 	/**
