@@ -36,7 +36,7 @@ public class Cone2Scene extends VTKScene
 		vtkActor coneActor = new vtkActor();
 		coneActor.SetMapper(coneMapper);
 
-		composite.addActor(coneActor);
+		composite.getRenderer().AddActor(coneActor);
 		composite.getRenderer().SetBackground(0.1, 0.2, 0.4);
 
 		// now we loop over 360 degrees and render the cone each time

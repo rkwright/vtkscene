@@ -12,6 +12,7 @@
 
 package com.geofx.vtk.scene;
 
+import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
 
@@ -49,7 +50,7 @@ public class SceneView extends ViewPart
 		
 		this.scene = Activator.constructScene(sceneName, vtkComposite);
 		
-		vtkComposite.addView(sceneName);
+	//	vtkComposite.addView(sceneName);
 		
 		// we need to explicitly request the focus or we never get it
 		vtkComposite.getFrame().requestFocus();		
@@ -59,6 +60,7 @@ public class SceneView extends ViewPart
 	{
 		System.out.println("SceneView.dispose called");
 		this.scene.dispose();
+		Activator.setView(null);
 	}
 	
 	/**
@@ -77,7 +79,7 @@ public class SceneView extends ViewPart
 			System.out.println("SceneView - constructing new scene: " + sceneName);
 			this.scene = Activator.constructScene(sceneName, vtkComposite);
 			
-			vtkComposite.addView(sceneName);		
+			//vtkComposite.addView(sceneName);		
 		}
 		
 		this.scene.render();

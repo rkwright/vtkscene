@@ -17,8 +17,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
+import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -286,6 +290,22 @@ public class Activator extends AbstractUIPlugin
 			name = n;
 			description = d;
 			label = l;
+		}
+	}
+	
+	/**
+	 * Create view from the view ID if it hasn't already been opened.
+	 * @param event
+	 */
+	public static void createView(ExecutionEvent event)
+	{
+		try
+		{
+			HandlerUtil.getActiveWorkbenchWindow(event).getActivePage().showView(PluginConstants.VIEW_ID);
+		}
+		catch (PartInitException e)
+		{
+			e.printStackTrace();
 		}
 	}
 }

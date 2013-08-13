@@ -26,6 +26,11 @@ public final class PluginConstants
 	 */
 	public static final String			PLUGIN_ID				= "com.geofx.vtk.scene";
 	
+	/*
+	 * The ID of the view itself
+	 */
+	public static final String			VIEW_ID				    = "com.geofx.vtk.scene.VTKScene";
+
 	/**
 	 * namespace URI for the properties
 	 */

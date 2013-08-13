@@ -31,7 +31,7 @@ public abstract class VTKScene
 
 		vtkComposite = composite;  
 		
-		vtkComposite.initComposite();
+		//vtkComposite.initComposite();
 	}
 
 	// a default constructor used by the ClassInfo enumerator

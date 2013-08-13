@@ -39,6 +39,9 @@ public class SelectHandler extends AbstractHandler
 			{
 				ClassInfo info = (ClassInfo)results[0];
 				Activator.setSceneName( info.name );
+				if (Activator.getView() == null)
+					Activator.createView(event);
+				
 				Activator.getView().updateView();
 			}
 		}

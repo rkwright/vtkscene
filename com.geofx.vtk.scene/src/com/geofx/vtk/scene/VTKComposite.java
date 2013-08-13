@@ -46,22 +46,7 @@ public class VTKComposite extends Composite
 	    //and add it as a child of the frame
 	    awtFrame.add(panel);
 	}
-
-	public void addActor ( vtkActor actor )
-	{
-		panel.GetRenderer().AddActor(actor);
-	}
-
-	public void initComposite()
-	{
-		
-	}
-
-	public void addView(String sceneName)
-	{
-		
-	}
-
+	
 	public java.awt.Frame getFrame()
 	{
 		return awtFrame;

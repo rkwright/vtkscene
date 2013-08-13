@@ -39,7 +39,7 @@ public class Cone1Scene extends VTKScene
 		vtkActor coneActor = new vtkActor();
 		coneActor.SetMapper(coneMapper);
 
-		composite.addActor(coneActor);
+		composite.getRenderer().AddActor(coneActor);
 	}
 	/**
 	 * a default constructor used by the ClassInfo enumerator
